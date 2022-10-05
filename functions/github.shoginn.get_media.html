@@ -1,6 +1,6 @@
 {{/* Function to get the appropriate icon depending on chosen icon pack. */}}
 {{/* Assign icon as fontawesome icon by default */}}
-{{- $extra_class := .extra_class -}}
+{{- $extra_class := .context.extra_class -}}
 {{- $icon_css := .context.icon_css -}}
 {{- $pack := or .context.icon_pack "fas" -}}
 {{- $pack_prefix := $pack -}}
@@ -20,8 +20,7 @@
         alt="{{ . }}"
         class="svg-icon svg-baseline"
         {{ if $icon_css }}style="{{- $icon_css | safeCSS -}}"{{- end -}}
-        loading="lazy"
-      />
+        loading="lazy" />
     {{- end -}}
   {{- else if eq $pack "image" -}}
     {{/* If the request is to have an image */}}
@@ -36,12 +35,10 @@
       width="{{ $image.Width }}"
       alt="{{ . }}"
       class="img-responsive"
-      loading="lazy"
-    />
+      loading="lazy" />
   {{- else -}}
     <i
       class="{{ $pack }} {{ $pack_prefix }}-{{ . }} {{ $extra_class -}} {{ $icon_css }}"
-      aria-hidden="true"
-    ></i>
+      aria-hidden="true"></i>
   {{- end -}}
 {{- end -}}

@@ -1,5 +1,7 @@
 module:
   mounts:
+    - source: functions
+      target: layouts/partials/blocks/functions
     - source: blocks
       target: layouts/partials/blocks
       includeFiles: "**.html"

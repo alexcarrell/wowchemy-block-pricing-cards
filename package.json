@@ -1,4 +1,12 @@
 {
+  "name": "shoginn.pricing-cards",
+  "description": "Wowchemy Block to enable pricing cards.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": "shoginn/wowchemy-block-pricing-cards",
+  "author": "Scott Ginn",
+  "bugs": "https://github.com/shoginn/wowchemy-block-pricing-cards/issues",
+  "homepage": "https://github.com/shoginn/wowchemy-block-pricing-cards/tree/main/",
   "scripts": {
     "prepare": "husky install",
     "precommit": "lint-staged"
